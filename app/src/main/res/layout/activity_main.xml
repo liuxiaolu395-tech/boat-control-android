@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp" android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText android:id="@+id/etHost" android:hint="Host/IP" android:layout_width="0dp" android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/etPort" app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText android:id="@+id/etPort" android:hint="Port" android:inputType="number" android:layout_width="80dp" android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toStartOf="@+id/btnConnect"/>
+
+    <Button android:id="@+id/btnConnect" android:text="Connect" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout android:id="@+id/video_container" android:layout_width="0dp" android:layout_height="220dp"
+        android:background="#000"
+        app:layout_constraintTop_toBottomOf="@+id/etHost" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="12dp"/>
+
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/video_container" android:gravity="center" android:layout_marginTop="16dp">
+        <Button android:id="@+id/btnLeft" android:text="←" android:layout_width="80dp" android:layout_height="80dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:id="@+id/btnUp" android:text="↑" android:layout_width="80dp" android:layout_height="80dp"/>
+            <Button android:id="@+id/btnDown" android:text="↓" android:layout_width="80dp" android:layout_height="80dp"/>
+        </LinearLayout>
+        <Button android:id="@+id/btnRight" android:text="→" android:layout_width="80dp" android:layout_height="80dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
