@@ -6,6 +6,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'com.didadidadi5.boatcontrol'
     compileSdk 34
     defaultConfig {
         applicationId "com.example.boatcontrol"
