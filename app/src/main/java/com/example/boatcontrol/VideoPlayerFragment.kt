@@ -13,7 +13,7 @@ import com.google.android.exoplayer2.ui.PlayerView
 class VideoPlayerFragment : Fragment() {
     private var player: ExoPlayer? = null
     private lateinit var playerView: PlayerView
-    var rtspUrl: String = "rtsp://192.168.1.100:8554/stream"
+    var rtspUrl: String = "rtsp://192.168.1.113:554/live/main_stream"
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
         inflater.inflate(R.layout.exoplayer_view, container, false).also {
